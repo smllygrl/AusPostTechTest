@@ -1,5 +1,7 @@
 package com.auspost.AddressesAPI.DataTransferObjects;
 
+import java.util.List;
+
 import javax.validation.constraints.NotNull;
 
 public class AddressDTO {
@@ -8,7 +10,7 @@ public class AddressDTO {
 	private Integer postcode;
 	
 	@NotNull
-	private String suburbs;
+	private String suburb;
 	
 	public Integer getPostcode() {
 		return postcode;
@@ -18,14 +20,12 @@ public class AddressDTO {
 		this.postcode = postcode;
 	}
 	
-	public String getSuburbs() {
-		return suburbs;
+	public String getSuburb() {
+		return suburb;
 	}
-	
-	public void setSuburbs(String suburbs) {
-		this.suburbs = suburbs;
+
+	public void setSuburb(String suburb) {
+		this.suburb = suburb;
 	}
-	
-	
 
 }

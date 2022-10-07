@@ -26,6 +26,7 @@ public class AddressController {
 	
 	@GetMapping
 	public List<Address> getAddresses() {
+		// what services to call dep on params
 		return addressService.all();
 	}
 	
