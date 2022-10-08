@@ -1,9 +1,6 @@
 package com.auspost.AddressesAPI.Entities;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +12,11 @@ public class Address {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
+	@Column(name="POSTCODES")
 	private Integer postcode;
+	
+	@Column(name = "SUBURBS")
 	private String suburb;
 	
 	public Address(Integer postcode, String suburb) {

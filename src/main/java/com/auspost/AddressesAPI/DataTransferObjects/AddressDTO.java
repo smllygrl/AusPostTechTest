@@ -1,7 +1,5 @@
 package com.auspost.AddressesAPI.DataTransferObjects;
 
-import java.util.List;
-
 import javax.validation.constraints.NotNull;
 
 public class AddressDTO {

@@ -20,6 +20,7 @@ public class AddressService {
 	@Autowired 
 	AddressRepository addressRepository;
 	
+	// GET /addresses
 	public List<Address> all() {
 		return addressRepository.findAll();
 	}
@@ -27,25 +28,22 @@ public class AddressService {
 	// TODO
 	// Below must become secure/ private
 	// Below must execute checks to ensure no duplicates of Postcode / Suburb
+	// POST /addresses
 	public void create(AddressDTO address) {
 		Address newAddress = new Address(address.getPostcode(), address.getSuburb());
 		addressRepository.save(newAddress);
 	}
 	
-//	@Query(value = "SELECT suburbs FROM addresses WHERE postcode = :postcodeInt")
-//	public String getSuburbs(@Param("postcodeInt") Integer postcode) {
-		// takes in a postcode
-		// find id of postcode
-		// return suburbs associated with id
-//		return getSuburbs(postcode);
-//	}
-//	
-//	public Integer getPostcode() {
-//		// takes in a suburb
-//		// find suburb in a table
-//		// return postcode associated with suburb
-//	}
-//	
+	// GET /addresses/postcodes?suburb={suburb}
+		public Integer getPostcodeBySuburb(String suburbName) {
+		Integer postcodeInt = this.addressRepository.postcodeBySuburb(suburbName);
+		return postcodeInt;
+	}
 	
-
+	// GET /addresses/suburbs?postcode={postcode}
+		public List<String> getSuburbsByPostcode(Integer postcodeInt) {
+		List<String> suburbsList = this.addressRepository.suburbsByPostcode(postcodeInt);
+		return suburbsList;
+	}
+	
 }
