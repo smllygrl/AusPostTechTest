@@ -1,5 +1,6 @@
 package com.auspost.AddressesAPI.Controllers;
 
+import java.security.Principal;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -31,13 +32,14 @@ public class AddressController {
 		return addressService.all();
 	}
 	
-	// POST /addresses
-	// TODO
-	// Ensure below is a secure endpoint
-	// Do a check to see if combination already exists
+	// NOTE ON POST /addresses
+	// Having Principal in the arguments for this in the controller means that the user has 
+	// to enter a username and password unless they will receive a 401 unauthorised
 	@PostMapping
 	@ResponseStatus(value = HttpStatus.CREATED)
-	public void saveAddress(@Valid @RequestBody AddressDTO address) {
+	public void saveAddress(@Valid @RequestBody AddressDTO address, Principal principal) {
+		// TODO
+		// Add a check to ensure there is not already a suburb of the same name in the DB
 		addressService.create(address);
 	}
 	
