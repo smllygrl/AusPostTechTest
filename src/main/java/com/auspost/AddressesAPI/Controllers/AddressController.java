@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,9 +33,9 @@ public class AddressController {
 		return addressService.all();
 	}
 	
-	// NOTE ON POST /addresses
-	// Having Principal in the arguments for this in the controller means that the user has 
-	// to enter a username and password unless they will receive a 401 unauthorised
+	// NOTE
+	// Given more time I would explore further what Principal is and whether it is actually necesary here
+	
 	@PostMapping
 	@ResponseStatus(value = HttpStatus.CREATED)
 	public void saveAddress(@Valid @RequestBody AddressDTO address, Principal principal) {
@@ -44,6 +45,7 @@ public class AddressController {
 	}
 	
 	// GET /addresses/postcodes?suburb={suburb}
+	@PreAuthorize("permitAll()")
 	@GetMapping(value = "/postcodes")
 	public Integer getPostcodeOfSuburb(@Valid @RequestParam(value = "suburb") String suburbName){
 		return addressService.getPostcodeBySuburb(suburbName);
@@ -51,6 +53,7 @@ public class AddressController {
 	
 	// GET /addresses/suburbs?postcode={postcode}
 	@GetMapping(value = "/suburbs")
+	@PreAuthorize("permitAll()")
 	public List<String> getSuburbsOfPostcode(@Valid @RequestParam(value = "postcode") Integer postcodeInt){
 		return addressService.getSuburbsByPostcode(postcodeInt);
 	}

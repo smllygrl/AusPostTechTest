@@ -25,11 +25,10 @@ public class AddressService {
 		return addressRepository.findAll();
 	}
 	
-	// TODO
-	// Below must become secure/ private
-	// Below must execute checks to ensure no duplicates of Postcode / Suburb
 	// POST /addresses
 	public void create(AddressDTO address) {
+	// TODO
+	// Execute checks to ensure no duplicates of Postcode / Suburb
 		Address newAddress = new Address(address.getPostcode(), address.getSuburb());
 		addressRepository.save(newAddress);
 	}
