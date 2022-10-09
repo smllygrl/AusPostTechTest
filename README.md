@@ -39,6 +39,7 @@ by postcode.~~
 suburb name~~
 
 I then worked to make the POST/addresses endpoint require authentication. As I was new to security and auth in Spring, and that the recent update had deprecated some common security config, I struggled to find a solution that I would be comfortable with. As such, I have some copied and pasted code in my SecurityConfig, with the link to it's origin commented out in the file. I then executed a workaround in my controller to ensure some end points remained public. Testing in Postman and the Browser gave me evidence that my solution met the MVP brief.
+
 ~~•A secured API to add new suburb and postcode combinations (you'll 
 have to work out how this should work)~~
 
