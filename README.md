@@ -30,7 +30,7 @@ I added a few items to the DB in Postman. Then, using MySQL Workbench, I generat
 - POSTCODE by SUBURB
 - SUBURB(S) by POSTCODE
 
-I added these queries to the repository layer and then built out my service and repository layer for these requests. They successfully rendered in both the Browser & Postman
+I added these queries to the repository layer and then built out my service and controller layer for these requests. They successfully rendered in both the Browser & Postman
 
 ~~•An API that allows mobile clients to retrieve the suburb information 
 by postcode.~~
