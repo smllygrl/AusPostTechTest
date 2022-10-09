@@ -23,6 +23,7 @@ I initialised a Spring Application with several dependencies and used Eclipse as
 First, I created a HealthCheckController to render "Hello World!" on successful app launch (endpoint: "/")
 
 I then built a repository layer which extends Java Persistance API.
+
 ~~•Some form of persistence~~
 
 I added a few items to the DB in Postman. Then, using MySQL Workbench, I generated SQL queries which fetched...
@@ -30,8 +31,10 @@ I added a few items to the DB in Postman. Then, using MySQL Workbench, I generat
 - SUBURB(S) by POSTCODE
 
 I added these queries to the repository layer and then built out my service and repository layer for these requests. They successfully rendered in both the Browser & Postman
+
 ~~•An API that allows mobile clients to retrieve the suburb information 
 by postcode.~~
+
 ~~•An API that allows mobile clients to retrieve a postcode given a 
 suburb name~~
 
