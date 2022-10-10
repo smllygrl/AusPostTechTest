@@ -5,7 +5,11 @@ Deployed for your convienience
 
 https://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/
 
+REQUIRED FOR ALL ENDPOINTS DUE TO TIME CONSTRAINTS
 
+username: user
+
+password: password
 
 ___________________________________________________________________________
 
@@ -56,15 +60,6 @@ Under 'Environment properties', add the following properties:
         SPRING_JPA_HIBERNATE_DDL_AUTO with value create (see notes below)
         
 After all settings have been saved and configuration is complete, Elastic Beanstalk will take some time to update the environment (5-10minutes), after which your URL should be available and ready for use!
-
-_________________________________________________________________
-
-REQUIRED FOR ALL ENDPOINTS DUE TO TIME CONSTRAINTS
-
-username: user
-
-password: password
-
 
 __________________________________________________________________
 
