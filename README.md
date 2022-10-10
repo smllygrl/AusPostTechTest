@@ -47,10 +47,7 @@ by postcode.~~
 ~~•An API that allows mobile clients to retrieve a postcode given a 
 suburb name~~
 
-I then worked to make the POST/addresses endpoint require authentication. As I was new to security and auth in Spring, and that the recent update had deprecated some common security config, I struggled to find a solution that I would be comfortable with. As such, I have some copied and pasted code in my SecurityConfig, with the link to it's origin commented out in the file. I then tried to execute a workaround so that some end points remained public. Testing in Postman and the Browser gave me evidence that my solution met the MVP brief.
-
-~~•A secured API to add new suburb and postcode combinations (you'll 
-have to work out how this should work)~~
+I then worked to make the POST/addresses endpoint require authentication. As I was new to security and auth in Spring, and that the recent update had deprecated some common security config, I struggled to find a solution that I would be comfortable with. As such, I have some copied and pasted code in my SecurityConfig, with the link to it's origin commented out in the file. I then tried to execute a workaround so that some end points remained public. Testing in Postman and the Browser gave me evidence that my solution met the MVP brief that the POST endpoint should be se secure.
 
 I then used some remaining time to work on unit testing and integration testing for my Health Check Controller. I had mentioned to Kalyani that JUnit testing was not something I had a lot of experience in, so I was sure to show some hearty attempts.
 __________________________________________________________________
