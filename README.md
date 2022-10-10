@@ -17,7 +17,9 @@ __________________________________________________________________
 REQUIRED FOR ALL ENDPOINTS DUE TO TIME CONSTRAINTS
 
 username: user
-password" password
+
+password: password
+
 
 __________________________________________________________________
 
