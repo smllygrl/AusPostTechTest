@@ -23,6 +23,19 @@ password: password
 
 __________________________________________________________________
 
+##Endpoints
+
+GET /addresses/suburbs?postcode={postcode}
+
+- Returns suburb(s) which have the postcode used in the query
+
+GET /addresses/postcodes?suburb={suburb}
+
+- Returns the postcode of the suburb used in the query
+
+POST /addresses
+__________________________________________________________________
+
 ## Approach
 
 (For more detailed information, please see attached design doc)
