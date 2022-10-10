@@ -71,9 +71,13 @@ GET /
 
 GET /addresses/suburbs?postcode={postcode}
 
+http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/addresses/suburbs?postcode=3055
+
 - Returns suburb(s) which have the postcode used in the query
 
 GET /addresses/postcodes?suburb={suburb}
+
+http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/addresses/postcodes?suburb=St+Kilda
 
 - Returns the postcode of the suburb used in the query
 
