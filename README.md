@@ -99,7 +99,9 @@ I then worked to make the POST/addresses endpoint require authentication. As I w
 
 I then used some remaining time to work on unit testing and integration testing for my Health Check Controller. I had mentioned to Kalyani that JUnit testing was not something I had a lot of experience in, so I was sure to show some hearty attempts.
 
-I deployed the project on Elastic Beanstalk using the deployment steps in this md. I then attempted to integrate into an AWS code pipeline (hence the yaml file) but was unable to complete this process in time.
+I deployed the project on Elastic Beanstalk using the deployment steps in this README. I then attempted to integrate into an AWS code pipeline (hence the yaml file) but was unable to complete this process in time.
+
+I manually entered the data using the POST endpoint and the steps described in this README.
 
 ###### Tools/ Languages used used:
 
