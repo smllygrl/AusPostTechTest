@@ -54,7 +54,7 @@ It took me a too much time to determine the path of least reisistance in buildin
 
 My username ("user") and password ("password") for the project are accessible in the source code (and now in the README.md!!!). This is of course a huge no-no in the production world. I was acutely aware of this, having spent time in past workplaces using env files for APIKeys. Ideally, these secrets would be stored in a centralised and MFA secure DevOps platform.
 
-It's also unfortunate that my workaround was unueccessful. This means all endpoints require auth rather than just the one.
+It's also unfortunate that my workaround was unsuccessful. This means all endpoints require auth rather than just the one.
 
 ###### Types/ Generics
 
