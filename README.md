@@ -57,7 +57,7 @@ Under 'Environment properties', add the following properties:
         
         SPRING_JPA_DATABASE_PLATFORM with value org.hibernate.dialect.MySQL5Dialect
         
-        SPRING_JPA_HIBERNATE_DDL_AUTO with value create (see notes below)
+        SPRING_JPA_HIBERNATE_DDL_AUTO with value update
         
 After all settings have been saved and configuration is complete, Elastic Beanstalk will take some time to update the environment (5-10minutes), after which your URL should be available and ready for use!
 
@@ -84,6 +84,32 @@ http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/address
 - Returns the postcode of the suburb used in the query
 
 POST /addresses
+
+OPEN Postman
+
+The URL for the POST request is 
+http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/addresses
+
+Select Auth
+
+Choose Basic Auth Type
+
+Fill in Username ("user") and Password ("password")
+
+Choose Body tab
+
+Select 'raw' from first drop down
+
+Select 'JSON' from second drop down
+
+Fill in body with JSON
+
+```
+{
+    "postcode": 1234,
+    "suburb": "Faketown"
+}
+```
 __________________________________________________________________
 
 ## Database Content
