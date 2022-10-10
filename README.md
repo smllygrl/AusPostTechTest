@@ -69,6 +69,8 @@ GET /
 
 - Health check, should render "Hello World!"
 
+(A health check ensures there is nothing that may interrupt the API from servicing incoming requests)
+
 GET /addresses/suburbs?postcode={postcode}
 
 http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/addresses/suburbs?postcode=3055
