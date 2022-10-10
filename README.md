@@ -1,5 +1,4 @@
 # AusPostTechTest
-___________________________________________________________________________
 
 ## A simple Spring Application to store and retirve Suburbs and Postcodes
 
