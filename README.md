@@ -23,7 +23,7 @@ password: password
 
 __________________________________________________________________
 
-##Endpoints
+## Endpoints
 
 GET /addresses/suburbs?postcode={postcode}
 
