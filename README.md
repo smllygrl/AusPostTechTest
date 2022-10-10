@@ -65,34 +65,34 @@ __________________________________________________________________
 
 ## Endpoints
 
-GET /
+###### GET /
 
 - Health check, should render "Hello World!"
 
 (A health check ensures there is nothing that may interrupt the API from servicing incoming requests)
 
-GET /addresses/suburbs?postcode={postcode}
+###### GET /addresses/suburbs?postcode={postcode}
 
 http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/addresses/suburbs?postcode=3055
 
 - Returns suburb(s) which have the postcode used in the query
 
-GET /addresses/postcodes?suburb={suburb}
+###### GET /addresses/postcodes?suburb={suburb}
 
 http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/addresses/postcodes?suburb=St+Kilda
 
 - Returns the postcode of the suburb used in the query
 
-POST /addresses
+###### POST /addresses
 
 OPEN Postman
 
 The URL for the POST request is 
 http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/addresses
 
-Select Auth
+Select Auth Tab
 
-Choose Basic Auth Type
+Choose Basic Auth Type from drop down
 
 Fill in Username ("user") and Password ("password")
 
