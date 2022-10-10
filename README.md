@@ -96,6 +96,22 @@ I added these queries to the repository layer and then built out my service and 
 I then worked to make the POST/addresses endpoint require authentication. As I was new to security and auth in Spring, and that the recent update had deprecated some common security config, I struggled to find a solution that I would be comfortable with. As such, I have some copied and pasted code in my SecurityConfig, with the link to it's origin commented out in the file. I then tried to execute a workaround so that some end points remained public. Testing in Postman and the Browser gave me evidence that my solution met the MVP brief that the POST endpoint should be se secure.
 
 I then used some remaining time to work on unit testing and integration testing for my Health Check Controller. I had mentioned to Kalyani that JUnit testing was not something I had a lot of experience in, so I was sure to show some hearty attempts.
+
+I deployed the project on Elastic Beanstalk using the deployment steps in this md. I then attempted to integrate into an AWS code pipeline (hence the yaml file) but was unable to complete this process in time.
+
+Tools/ Languages used used:
+
+Eclipse
+
+AWS Elastic Beanstalk
+
+Java Spring
+
+Postman
+
+SQL
+
+MySQL Workbench
 __________________________________________________________________
 
 ## If I had more time...
