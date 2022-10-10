@@ -25,6 +25,10 @@ __________________________________________________________________
 
 ## Endpoints
 
+GET /
+
+- Health check, should render "Hello World!"
+
 GET /addresses/suburbs?postcode={postcode}
 
 - Returns suburb(s) which have the postcode used in the query
