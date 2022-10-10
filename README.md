@@ -2,7 +2,8 @@
 
 How to use
 
-Using the command ./mvnw clean install in the root folder will generate post-api-0.0.1-SNAPSHOT.jar under /target
+Using the command ( ./mvnw clean install ) in the root folder will generate post-api-0.0.1-SNAPSHOT.jar under /target
+
 This project uses JPA for data persistence and requires an SQL database - it is intended to be deployed within a web server environment on AWS's Elastic Beanstalk with the following directions:
 
 On AWS Elastic Beanstalk, create a new web server environment, name is unimportant
