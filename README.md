@@ -6,7 +6,7 @@ Deployed for your convienience
 
 https://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/
 
-REQUIRED FOR ALL ENDPOINTS DUE TO TIME CONSTRAINTS
+(Auth required for ALL endpoints due to time constraints)
 
 username: user
 
