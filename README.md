@@ -14,6 +14,13 @@ have to work out how this should work)
 •Some form of persistence
 __________________________________________________________________
 
+REQUIRED FOR ALL ENDPOINTS DUE TO TIME CONSTRAINTS
+
+username: user
+password" password
+
+__________________________________________________________________
+
 ## Approach
 
 (For more detailed information, please see attached design doc)
@@ -38,7 +45,7 @@ by postcode.~~
 ~~•An API that allows mobile clients to retrieve a postcode given a 
 suburb name~~
 
-I then worked to make the POST/addresses endpoint require authentication. As I was new to security and auth in Spring, and that the recent update had deprecated some common security config, I struggled to find a solution that I would be comfortable with. As such, I have some copied and pasted code in my SecurityConfig, with the link to it's origin commented out in the file. I then executed a workaround in my controller to ensure some end points remained public. Testing in Postman and the Browser gave me evidence that my solution met the MVP brief.
+I then worked to make the POST/addresses endpoint require authentication. As I was new to security and auth in Spring, and that the recent update had deprecated some common security config, I struggled to find a solution that I would be comfortable with. As such, I have some copied and pasted code in my SecurityConfig, with the link to it's origin commented out in the file. I then tried to execute a workaround so that some end points remained public. Testing in Postman and the Browser gave me evidence that my solution met the MVP brief.
 
 ~~•A secured API to add new suburb and postcode combinations (you'll 
 have to work out how this should work)~~
@@ -55,6 +62,8 @@ It took me a too much time to determine the path of least reisistance in buildin
 ###### Security
 
 My username ("user") and password ("password") for the project are accessible in the source code (and now in the README.md!!!). This is of course a huge no-no in the production world. I was acutely aware of this, having spent time in past workplaces using env files for APIKeys. Ideally, these secrets would be stored in a centralised and MFA secure DevOps platform.
+
+It's also unfortunate that my workaround was unueccessful. This means all endpoints require auth rather than just the one.
 
 ###### Types/ Generics
 
