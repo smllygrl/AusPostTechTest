@@ -1,18 +1,54 @@
 # AusPostTechTest
 
-We want you to implement:
+How to use
 
-•An API that allows mobile clients to retrieve the suburb information 
-by postcode.
+    Using the command ./mvnw clean install in the root folder will generate post-api-0.0.1-SNAPSHOT.jar under /target
+    This project uses JPA for data persistence and requires an SQL database - it is intended to be deployed within a web server environment on AWS's 
+    Elastic Beanstalk with the following directions:
 
-•An API that allows mobile clients to retrieve a postcode given a 
-suburb name
+    On AWS Elastic Beanstalk, create a new web server environment, name is unimportant
+    
+    Under 'Platform', set the platform to 'Java' (other default options are fine here)
+    
+    When prompted for application code, provide the .jar file generated earlier
+    
+    Select 'Configure More Options'
+    
+    Under 'Software' select 'Edit'
+    
+    Under 'Environment properties', add a new property SERVER_PORT with value 5000 and click 'Save'
+    
+    Back on the environment configuration screen, under 'Database', select 'Edit'
+    
+    The default settings that load should be for the default mysql engine
+    
+    Add the username root and the password password and select 'Save' (as set in the project files src/resources/application.properties)
+    
+    Back on the environment configuration screen, select 'Create environment'
+    
+    Wait for environment to be created (can be 10-15+ minutes)
+    
+    Open the created environment and select 'Configuration' on the left side of the screen
+    
+    In the category 'Database', copy the Endpoint value including the port to clipboard
+    
+    In the category 'Software', select 'Edit'
+    
+    Under 'Environment properties', add the following properties:
+    
+        SPRING_DATASOURCE_URL with value jdbc:mysql://{endpoint value copied earlier}/ebdb
 
-•A secured API to add new suburb and postcode combinations (you'll 
-have to work out how this should work)
+        SPRING_DATASOURCE_USERNAME with value root
+        
+        SPRING_DATASOURCE_PASSWORD with value password
+        
+        SPRING_JPA_DATABASE_PLATFORM with value org.hibernate.dialect.MySQL5Dialect
+        
+        SPRING_JPA_HIBERNATE_DDL_AUTO with value create (see notes below)
+        
+    After all settings have been saved and configuration is complete, Elastic Beanstalk will take some time to update the environment (5-10minutes), after which your URL should be available and ready for use!
 
-•Some form of persistence
-__________________________________________________________________
+_________________________________________________________________
 
 REQUIRED FOR ALL ENDPOINTS DUE TO TIME CONSTRAINTS
 
