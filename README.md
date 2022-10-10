@@ -61,6 +61,8 @@ Fill in body with JSON
     "suburb": "Faketown"
 }
 ```
+
+Send query 
 __________________________________________________________________
 
 ## Database Content
