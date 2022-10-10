@@ -1,6 +1,13 @@
 # AusPostTechTest
+___________________________________________________________________________
 
-How to use
+Deployed for your convienience
+
+https://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/
+
+___________________________________________________________________________
+
+## How to use
 
 Using the command ( ./mvnw clean install ) in the root folder will generate post-api-0.0.1-SNAPSHOT.jar under /target
 
