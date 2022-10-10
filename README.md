@@ -10,57 +10,6 @@ REQUIRED FOR ALL ENDPOINTS DUE TO TIME CONSTRAINTS
 username: user
 
 password: password
-
-___________________________________________________________________________
-
-## How to use
-
-Using the command ( ./mvnw clean install ) in the root folder will generate post-api-0.0.1-SNAPSHOT.jar under /target
-
-This project uses JPA for data persistence and requires an SQL database - it is intended to be deployed within a web server environment on AWS's Elastic Beanstalk with the following directions:
-
-On AWS Elastic Beanstalk, create a new web server environment, name is unimportant
-    
-Under 'Platform', set the platform to 'Java' (other default options are fine here)
-    
-When prompted for application code, provide the .jar file generated earlier
-    
-Select 'Configure More Options'
-    
-Under 'Software' select 'Edit'
-    
-Under 'Environment properties', add a new property SERVER_PORT with value 5000 and click 'Save'
-    
-Back on the environment configuration screen, under 'Database', select 'Edit'
-    
-The default settings that load should be for the default mysql engine
-    
-Add the username root and the password password and select 'Save' (as set in the project files src/resources/application.properties)
-    
-Back on the environment configuration screen, select 'Create environment'
-    
-Wait for environment to be created (can be 10-15+ minutes)
-    
-Open the created environment and select 'Configuration' on the left side of the screen
-    
-In the category 'Database', copy the Endpoint value including the port to clipboard
-    
-In the category 'Software', select 'Edit'
-    
-Under 'Environment properties', add the following properties:
-    
-        SPRING_DATASOURCE_URL with value jdbc:mysql://{endpoint value copied earlier}/ebdb
-
-        SPRING_DATASOURCE_USERNAME with value root
-        
-        SPRING_DATASOURCE_PASSWORD with value password
-        
-        SPRING_JPA_DATABASE_PLATFORM with value org.hibernate.dialect.MySQL5Dialect
-        
-        SPRING_JPA_HIBERNATE_DDL_AUTO with value update
-        
-After all settings have been saved and configuration is complete, Elastic Beanstalk will take some time to update the environment (5-10minutes), after which your URL should be available and ready for use!
-
 __________________________________________________________________
 
 ## Endpoints
@@ -125,6 +74,55 @@ __________________________________________________________________
 3160 Belgrave
 
 3182 St Kilda
+
+## How to deploy
+
+Using the command ( ./mvnw clean install ) in the root folder will generate post-api-0.0.1-SNAPSHOT.jar under /target
+
+This project uses JPA for data persistence and requires an SQL database - it is intended to be deployed within a web server environment on AWS's Elastic Beanstalk with the following directions:
+
+On AWS Elastic Beanstalk, create a new web server environment, name is unimportant
+    
+Under 'Platform', set the platform to 'Java' (other default options are fine here)
+    
+When prompted for application code, provide the .jar file generated earlier
+    
+Select 'Configure More Options'
+    
+Under 'Software' select 'Edit'
+    
+Under 'Environment properties', add a new property SERVER_PORT with value 5000 and click 'Save'
+    
+Back on the environment configuration screen, under 'Database', select 'Edit'
+    
+The default settings that load should be for the default mysql engine
+    
+Add the username root and the password password and select 'Save' (as set in the project files src/resources/application.properties)
+    
+Back on the environment configuration screen, select 'Create environment'
+    
+Wait for environment to be created (can be 10-15+ minutes)
+    
+Open the created environment and select 'Configuration' on the left side of the screen
+    
+In the category 'Database', copy the Endpoint value including the port to clipboard
+    
+In the category 'Software', select 'Edit'
+    
+Under 'Environment properties', add the following properties:
+    
+        SPRING_DATASOURCE_URL with value jdbc:mysql://{endpoint value copied earlier}/ebdb
+
+        SPRING_DATASOURCE_USERNAME with value root
+        
+        SPRING_DATASOURCE_PASSWORD with value password
+        
+        SPRING_JPA_DATABASE_PLATFORM with value org.hibernate.dialect.MySQL5Dialect
+        
+        SPRING_JPA_HIBERNATE_DDL_AUTO with value update
+        
+After all settings have been saved and configuration is complete, Elastic Beanstalk will take some time to update the environment (5-10minutes), after which your URL should be available and ready for use!
+
 __________________________________________________________________
 
 ## Approach
