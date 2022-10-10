@@ -40,6 +40,16 @@ GET /addresses/postcodes?suburb={suburb}
 POST /addresses
 __________________________________________________________________
 
+## Database Content
+
+3073 Reservoir
+3055 Brunswick South
+3055 Brunswick West
+3055 Moreland West
+3160 Belgrave
+3182 St Kilda
+__________________________________________________________________
+
 ## Approach
 
 (For more detailed information, please see attached design doc)
