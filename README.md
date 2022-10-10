@@ -117,6 +117,8 @@ Postman
 SQL
 
 MySQL Workbench
+
+Terminal/ CLI
 __________________________________________________________________
 
 ## If I had more time...
