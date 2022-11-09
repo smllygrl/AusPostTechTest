@@ -1,17 +1,5 @@
-# AusPostTechTest
 
 ## A simple Spring Application to store and retrieve Suburbs and Postcodes
-
-Deployed for your convienience
-
-https://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/
-
-(Auth required for ALL endpoints due to time constraints)
-
-username: user
-
-password: password
-__________________________________________________________________
 
 ## Endpoints
 
@@ -23,22 +11,15 @@ __________________________________________________________________
 
 ###### GET /addresses/suburbs?postcode={postcode}
 
-http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/addresses/suburbs?postcode=3055
-
 - Returns suburb(s) which have the postcode used in the query
 
 ###### GET /addresses/postcodes?suburb={suburb}
-
-http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/addresses/postcodes?suburb=St+Kilda
 
 - Returns the postcode of the suburb used in the query
 
 ###### POST /addresses
 
 OPEN Postman
-
-The URL for the POST request is 
-http://auspostfinal-env.eba-rqn8ti5f.ap-southeast-2.elasticbeanstalk.com/addresses
 
 Select Auth Tab
 
@@ -82,8 +63,6 @@ __________________________________________________________________
 
 ## Approach
 
-(For more detailed information, please see attached design doc)
-
 I initialised a Spring Application with several dependencies and used Eclipse as my IDE.
 
 First, I created a HealthCheckController to render "Hello World!" on successful app launch (endpoint: "/")
@@ -98,9 +77,7 @@ I added these queries to the repository layer and then built out my service and 
 
 I then worked to make the POST/addresses endpoint require authentication. As I was new to security and auth in Spring, and that the recent update had deprecated some common security config, I struggled to find a solution that I would be comfortable with. As such, I have some copied and pasted code in my SecurityConfig, with the link to it's origin commented out in the file. I then attempted to execute a workaround so that some end points remained public, but this was unsuccessful. Testing in Postman and the Browser gave me evidence that my solution met the MVP brief that the POST endpoint should be se secure.
 
-I then used some remaining time to work on unit testing and integration testing for my Health Check Controller. I had mentioned to Kalyani that JUnit testing was not something I had a lot of experience in, so I was sure to show some hearty attempts.
-
-I deployed the project on Elastic Beanstalk using the deployment steps in this README. I then attempted to integrate into an AWS code pipeline (hence the yaml file) but was unable to complete this process in time.
+I then used some remaining time to work on unit testing and integration testing for my Health Check Controller. I had mentioned to Kalyani that JUnit testing was not something I had a lot of experience in, so I was sure to show some hearty attempts. I then attempted to integrate into an AWS code pipeline (hence the yaml file) but was unable to complete this process in time.
 
 I manually entered the data using the POST endpoint and the steps described in this README.
 
